@@ -1,4 +1,4 @@
-package com.cydeo.utulities;
+package com.cydeo.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -6,11 +6,8 @@ import java.util.Properties;
 
 public class ConfigurationReader {
 
-
     //1- Create the object of Properties
     private static Properties properties = new Properties();
-    // STATİC OLMASININ SEBEBİ CLASS ÇAĞIRILINCA HERSEYDEN ÖNCE BU ÇALIŞSSIN
-    // CLASS DIŞINDA ULAŞMAK İSTEMEDİĞİM İÇİN PRİVATE YAPTIK
 
     static{
 
@@ -32,9 +29,9 @@ public class ConfigurationReader {
         }
 
     }
-    //METODUMUZU YAZDIK
+
     public static String getProperty(String keyword){
         return properties.getProperty(keyword);
     }
-//CLASS DIŞINDA ULAŞILABİLİR OLMALI BU METOD  OY YÜZDEN PUBLİC
+
 }
