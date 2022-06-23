@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         //bu classın projenin geri kalanına ulaşması için. 2 bölümü var
       features = "src/test/resources/features", //resources altındaki features sağ tıkla path reference content root path i seç
       glue ="com/cydeo/step_definitions", // aynı package içinde olduğu için step_definitions a sağ tıkla path reference content root path i seç
-        tags = "@scenarioOutline",
+        tags = "@wip",
         dryRun = false,
         publish = false
 )

@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class WebTable_StepDefinitions {
 
-    WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
+    WebTableLoginPage webTableLoginPage = new WebTableLoginPage();//nesnemizi en başta oluşturuyoruz
 
     @Given("user is on the login page of web table app")
     public void user_is_on_the_login_page_of_web_table_app() {
