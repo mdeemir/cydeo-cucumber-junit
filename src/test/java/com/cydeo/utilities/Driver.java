@@ -20,14 +20,14 @@ public class Driver {
     We make it static because we will use it in a static method.
      */
     //private static WebDriver driver; // value is null by default
-
+//paralel test için. driverpool yerine başka bi isim de verebilirsin
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
     /*
     Create a re-usable utility method which will return same driver instance when we call it
      */
     public static WebDriver getDriver(){
-
+//driverpool paralel tes için kullanılıyor
         if (driverPool.get() == null){
 
             /*
@@ -44,7 +44,7 @@ public class Driver {
             switch (browserType){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver());
+                    driverPool.set(new ChromeDriver());//nesne oluşturduk driver
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
